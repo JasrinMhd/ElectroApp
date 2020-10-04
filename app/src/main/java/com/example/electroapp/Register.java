@@ -146,7 +146,7 @@ public class Register extends AppCompatActivity {
                                         Toast.makeText(Register.this, "Congratulations, your account has been created Successfully.", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
 
-                                        Intent intent = new Intent(Register.this,Login.class);
+                                        Intent intent = new Intent(Register.this, Login.class);
                                         startActivity(intent);
                                     }
                                     else
