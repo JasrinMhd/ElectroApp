@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "882117709932",
+    "firebase_url": "https://electroapp-af21c.firebaseio.com",
+    "project_id": "electroapp-af21c",
+    "storage_bucket": "electroapp-af21c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882117709932:android:f91ac978798b704f9b8849",
+        "android_client_info": {
+          "package_name": "com.example.electroapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882117709932-43fm4v18f4h1l7m0sprti99dsb5252u4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjoXqdFHh65Ixw9ZVf_uCqvBTtV8Gn7_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882117709932-43fm4v18f4h1l7m0sprti99dsb5252u4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

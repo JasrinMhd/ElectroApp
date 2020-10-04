@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ElectroApp</string>
+    <string name="username">Username</string>
+    <string name="l_password">password</string>
+    <string name="name">Name</string>
+    <string name="e_mail">E-mail</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="update">Update</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="login">Login</string>
+
+    <string name="register">REGISTER</string>
+    <string name="not_registered">Not Registered?</string>
+    <string name="r_username">Username</string>
+    <string name="r_address">Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="r_password">Password</string>
+    <string name="r_register">Register</string>
+    <string name="r_email">Email</string>
+    <string name="r_phone_number">Phone Number</string>
+    <string name="already_registered">Already Registered?</string>
+    <string name="textViewLogin">Login</string>
+
+</resources>
