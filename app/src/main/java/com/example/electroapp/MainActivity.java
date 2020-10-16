@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText nameEp, emailEp, phoneEp, addressEp;
     private Button updateButtonEp;
 
-    //progress dialog
+
     private ProgressDialog progressDialog;
-    //firebase auth
+
     private FirebaseAuth firebaseAuth;
 
 
@@ -79,15 +79,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkUser() {
         FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user == null){
+            startActivity(new Intent(getApplicationContext(), Login.class));
+            finish();
+        }
+        else {
 
             loadMyInfo();
+        }
 
     }
 
     private void loadMyInfo() {
         //load user info
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
-        ref.orderByChild("uid").equalTo(firebaseAuth.getUid())
+        ref.orderByChild("name").equalTo(firebaseAuth.getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -96,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                             String email = ""+ds.child("email").getValue();
                             String phone = ""+ds.child("phone").getValue();
                             String address = ""+ds.child("address").getValue();
-                            String uid = ""+ds.child("uid").getValue();
+
 
                             nameEp.setText(name);
                             emailEp.setText(email);
@@ -112,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
     });
 }
 
-    private String name, email, phone, address, uid;
+    private String name, email, phone, address;
     private void inputData() {
 
         name = nameEp.getText().toString().trim();
@@ -130,8 +136,8 @@ public class MainActivity extends AppCompatActivity {
 
         //setup data to save
         HashMap<String, Object> hashMap = new HashMap<>();
-        hashMap.put("uid", ""+ firebaseAuth.getUid());
-        hashMap.put("name", ""+ name);
+
+        hashMap.put("name", ""+ firebaseAuth.getUid());
         hashMap.put("email", ""+ email);
         hashMap.put("phone", ""+ phone);
         hashMap.put("address", ""+ address);
